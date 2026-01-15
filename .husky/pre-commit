@@ -1,2 +1,5 @@
 npm run type-check
 npx --no-install lint-staged
+
+# Run principal view linting
+npx @principal-ai/principal-view-cli lint --quiet
