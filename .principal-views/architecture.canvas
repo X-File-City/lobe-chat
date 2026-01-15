@@ -419,28 +419,6 @@
       }
     },
     {
-      "id": "context-to-memory",
-      "fromNode": "context-engine",
-      "toNode": "memory-system",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "color": "#d83b01",
-      "pv": {
-        "edgeType": "data-persistence"
-      }
-    },
-    {
-      "id": "agent-to-models",
-      "fromNode": "agent-runtime",
-      "toNode": "model-runtime",
-      "fromSide": "top",
-      "toSide": "bottom",
-      "color": "#ff8c00",
-      "pv": {
-        "edgeType": "tool-execution"
-      }
-    },
-    {
       "id": "agent-to-tools",
       "fromNode": "agent-runtime",
       "toNode": "builtin-tools",
@@ -449,28 +427,6 @@
       "color": "#8064a2",
       "pv": {
         "edgeType": "tool-execution"
-      }
-    },
-    {
-      "id": "agent-to-plugins",
-      "fromNode": "agent-runtime",
-      "toNode": "plugin-system",
-      "fromSide": "right",
-      "toSide": "left",
-      "color": "#8064a2",
-      "pv": {
-        "edgeType": "plugin-connection"
-      }
-    },
-    {
-      "id": "plugin-to-tools",
-      "fromNode": "plugin-system",
-      "toNode": "builtin-tools",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "color": "#8064a2",
-      "pv": {
-        "edgeType": "contains"
       }
     },
     {
@@ -496,17 +452,6 @@
       }
     },
     {
-      "id": "memory-to-rag",
-      "fromNode": "memory-system",
-      "toNode": "rag-engine",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "color": "#d83b01",
-      "pv": {
-        "edgeType": "data-flow"
-      }
-    },
-    {
       "id": "streaming-to-ui",
       "fromNode": "streaming-engine",
       "toNode": "web-app",
@@ -518,47 +463,93 @@
       }
     },
     {
-      "id": "streaming-from-models",
-      "fromNode": "model-runtime",
-      "toNode": "streaming-engine",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "color": "#d83b01",
-      "pv": {
-        "edgeType": "ai-response"
-      }
-    },
-    {
-      "id": "files-to-rag",
+      "id": "edge-file-processors-rag-engine-1768500038322",
       "fromNode": "file-processors",
       "toNode": "rag-engine",
       "fromSide": "right",
-      "toSide": "left",
-      "color": "#8064a2",
+      "toSide": "bottom",
       "pv": {
         "edgeType": "data-flow"
       }
     },
     {
-      "id": "desktop-ipc",
+      "id": "edge-context-engine-memory-system-1768500038322",
+      "fromNode": "context-engine",
+      "toNode": "memory-system",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "pv": {
+        "edgeType": "data-persistence"
+      }
+    },
+    {
+      "id": "edge-memory-system-rag-engine-1768500038322",
+      "fromNode": "memory-system",
+      "toNode": "rag-engine",
+      "fromSide": "bottom",
+      "toSide": "right",
+      "pv": {
+        "edgeType": "data-flow"
+      }
+    },
+    {
+      "id": "edge-model-runtime-streaming-engine-1768500038322",
+      "fromNode": "model-runtime",
+      "toNode": "streaming-engine",
+      "fromSide": "left",
+      "toSide": "right",
+      "pv": {
+        "edgeType": "ai-response"
+      }
+    },
+    {
+      "id": "edge-agent-runtime-model-runtime-1768500038322",
+      "fromNode": "agent-runtime",
+      "toNode": "model-runtime",
+      "fromSide": "right",
+      "toSide": "left",
+      "pv": {
+        "edgeType": "tool-execution"
+      }
+    },
+    {
+      "id": "edge-desktop-app-api-layer-1768500038322",
       "fromNode": "desktop-app",
       "toNode": "api-layer",
       "fromSide": "right",
-      "toSide": "left",
-      "color": "#ff8c00",
+      "toSide": "bottom",
       "pv": {
         "edgeType": "api-call"
       }
     },
     {
-      "id": "state-dependency",
+      "id": "edge-agent-runtime-plugin-system-1768500038322",
+      "fromNode": "agent-runtime",
+      "toNode": "plugin-system",
+      "fromSide": "right",
+      "toSide": "left",
+      "pv": {
+        "edgeType": "plugin-connection"
+      }
+    },
+    {
+      "id": "edge-state-store-agent-runtime-1768500038322",
       "fromNode": "state-store",
       "toNode": "agent-runtime",
       "fromSide": "bottom",
       "toSide": "top",
-      "color": "#616161",
       "pv": {
         "edgeType": "depends-on"
+      }
+    },
+    {
+      "id": "edge-plugin-system-builtin-tools-1768500038322",
+      "fromNode": "plugin-system",
+      "toNode": "builtin-tools",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "pv": {
+        "edgeType": "contains"
       }
     }
   ]
