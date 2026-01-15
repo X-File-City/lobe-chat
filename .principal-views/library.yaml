@@ -1,6 +1,239 @@
 version: "1.0.0"
-name: "Component Library"
+name: "LobeChat Component Library"
 
-nodeComponents: {}
+nodeComponents:
+  # Frontend Components
+  web-app:
+    description: "Next.js 16 web application with App Router"
+    color: "#0078d4"
+    tags: ["frontend", "nextjs", "web"]
+    shape: "rectangle"
+    size: "large"
 
-edgeComponents: {}
+  desktop-app:
+    description: "Electron-based desktop application"
+    color: "#0078d4"
+    tags: ["frontend", "electron", "desktop"]
+    shape: "rectangle"
+    size: "large"
+
+  mobile-ui:
+    description: "Mobile-responsive variant with route groups"
+    color: "#0078d4"
+    tags: ["frontend", "mobile", "responsive"]
+    shape: "rectangle"
+    size: "large"
+
+  chat-interface:
+    description: "Multi-agent chat interface"
+    color: "#5c2d91"
+    tags: ["ui", "chat", "interface"]
+    shape: "rounded"
+    size: "medium"
+
+  agent-editor:
+    description: "Visual agent builder interface"
+    color: "#5c2d91"
+    tags: ["ui", "agent", "builder"]
+    shape: "rounded"
+    size: "medium"
+
+  # Data Layer
+  database:
+    description: "PostgreSQL database with Drizzle ORM"
+    color: "#107c10"
+    tags: ["data", "database", "postgresql"]
+    shape: "cylinder"
+    size: "large"
+
+  state-store:
+    description: "Zustand state management with slice organization"
+    color: "#107c10"
+    tags: ["data", "state", "zustand"]
+    shape: "database"
+    size: "medium"
+
+  cache:
+    description: "Redis caching layer"
+    color: "#107c10"
+    tags: ["data", "cache", "redis"]
+    shape: "database"
+    size: "small"
+
+  # Backend Services
+  api-layer:
+    description: "tRPC + REST API endpoints"
+    color: "#ff8c00"
+    tags: ["service", "api", "trpc"]
+    shape: "rectangle"
+    size: "medium"
+
+  auth-service:
+    description: "Authentication with Better Auth, Clerk, OIDC"
+    color: "#ff8c00"
+    tags: ["service", "auth", "security"]
+    shape: "rectangle"
+    size: "small"
+
+  model-runtime:
+    description: "AI model provider abstraction layer"
+    color: "#ff8c00"
+    tags: ["service", "ai", "models"]
+    shape: "cloud"
+    size: "large"
+
+  agent-runtime:
+    description: "Agent execution engine"
+    color: "#ff8c00"
+    tags: ["service", "agent", "runtime"]
+    shape: "gear"
+    size: "medium"
+
+  context-engine:
+    description: "Conversation context management"
+    color: "#ff8c00"
+    tags: ["service", "context", "memory"]
+    shape: "process"
+    size: "medium"
+
+  # Plugin System
+  plugin-system:
+    description: "Plugin and tool ecosystem"
+    color: "#8064a2"
+    tags: ["integration", "plugin", "tools"]
+    shape: "hexagon"
+    size: "medium"
+
+  builtin-tools:
+    description: "Built-in tools for common tasks"
+    color: "#8064a2"
+    tags: ["integration", "tools", "builtin"]
+    shape: "rectangle"
+    size: "medium"
+
+  file-processors:
+    description: "File loading and processing capabilities"
+    color: "#8064a2"
+    tags: ["integration", "files", "processing"]
+    shape: "document"
+    size: "small"
+
+  # Data Processing
+  rag-engine:
+    description: "Retrieval-Augmented Generation system"
+    color: "#d83b01"
+    tags: ["processing", "rag", "vector"]
+    shape: "diamond"
+    size: "medium"
+
+  memory-system:
+    description: "User conversation memory management"
+    color: "#d83b01"
+    tags: ["processing", "memory", "storage"]
+    shape: "database"
+    size: "medium"
+
+  streaming-engine:
+    description: "Real-time response streaming"
+    color: "#d83b01"
+    tags: ["processing", "streaming", "realtime"]
+    shape: "process"
+    size: "small"
+
+  # Security & Performance
+  security-layer:
+    description: "Security and protection systems"
+    color: "#a4262c"
+    tags: ["security", "protection", "safety"]
+    shape: "shield"
+    size: "small"
+
+edgeComponents:
+  # Data Flow
+  data-flow:
+    description: "Data movement between components"
+    color: "#0078d4"
+    tags: ["data", "flow", "sync"]
+    width: 2
+    directed: true
+
+  api-call:
+    description: "API request/response flow"
+    color: "#ff8c00"
+    tags: ["communication", "api", "request"]
+    width: 2
+    directed: true
+
+  state-sync:
+    description: "State synchronization between components"
+    color: "#107c10"
+    tags: ["data", "state", "sync"]
+    width: 2
+    directed: true
+
+  # Integration Patterns
+  plugin-connection:
+    description: "Plugin system connections"
+    color: "#8064a2"
+    tags: ["integration", "plugin", "connection"]
+    width: 2
+    directed: true
+
+  tool-execution:
+    description: "Tool calling and execution flow"
+    color: "#d83b01"
+    tags: ["workflow", "tool", "execution"]
+    width: 2
+    directed: true
+
+  # User Interactions
+  user-input:
+    description: "User input to system"
+    color: "#5c2d91"
+    tags: ["interaction", "input", "user"]
+    width: 2
+    directed: true
+
+  ai-response:
+    description: "AI response to user"
+    color: "#5c2d91"
+    tags: ["interaction", "response", "ai"]
+    width: 2
+    directed: true
+
+  # System Operations
+  authentication:
+    description: "User authentication flow"
+    color: "#a4262c"
+    tags: ["security", "auth", "flow"]
+    width: 2
+    directed: true
+
+  data-persistence:
+    description: "Data storage and retrieval"
+    color: "#107c10"
+    tags: ["data", "storage", "persistence"]
+    width: 2
+    directed: true
+
+  real-time-sync:
+    description: "Real-time data synchronization"
+    color: "#ff8c00"
+    tags: ["communication", "realtime", "sync"]
+    width: 2
+    directed: true
+
+  # Dependencies
+  depends-on:
+    description: "Component dependency relationship"
+    color: "#616161"
+    tags: ["dependency", "relationship", "system"]
+    width: 1
+    directed: true
+
+  contains:
+    description: "Component contains sub-components"
+    color: "#616161"
+    tags: ["containment", "structure", "composition"]
+    width: 1
+    directed: false

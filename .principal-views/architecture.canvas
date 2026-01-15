@@ -3,6 +3,563 @@
     "name": "LobeChat Architecture",
     "version": "1.0.0"
   },
-  "nodes": [],
-  "edges": []
+  "nodes": [
+    {
+      "id": "web-app",
+      "type": "text",
+      "x": 100,
+      "y": 100,
+      "width": 180,
+      "height": 80,
+      "color": "#0078d4",
+      "text": "# Web Application\n**Next.js 16** with App Router and multi-variant support",
+      "pv": {
+        "nodeType": "web-app",
+        "description": "Next.js 16 web application with App Router"
+      }
+    },
+    {
+      "id": "desktop-app",
+      "type": "text",
+      "x": 100,
+      "y": 250,
+      "width": 180,
+      "height": 80,
+      "color": "#0078d4",
+      "text": "# Desktop Application\n**Electron-based** desktop app with native integrations",
+      "pv": {
+        "nodeType": "desktop-app",
+        "description": "Electron-based desktop application"
+      }
+    },
+    {
+      "id": "mobile-ui",
+      "type": "text",
+      "x": 100,
+      "y": 400,
+      "width": 180,
+      "height": 80,
+      "color": "#0078d4",
+      "text": "# Mobile Interface\n**Mobile-responsive** variant with touch-optimized UI",
+      "pv": {
+        "nodeType": "mobile-ui",
+        "description": "Mobile-responsive variant with route groups"
+      }
+    },
+    {
+      "id": "state-store",
+      "type": "text",
+      "x": 400,
+      "y": 200,
+      "width": 160,
+      "height": 80,
+      "color": "#107c10",
+      "text": "# State Management\n**Zustand store** with slice organization",
+      "pv": {
+        "nodeType": "state-store",
+        "description": "Zustand state management with slice organization"
+      }
+    },
+    {
+      "id": "api-layer",
+      "type": "text",
+      "x": 700,
+      "y": 200,
+      "width": 160,
+      "height": 80,
+      "color": "#ff8c00",
+      "text": "# API Layer\n**tRPC + REST** API with type safety",
+      "pv": {
+        "nodeType": "api-layer",
+        "description": "tRPC + REST API with type safety"
+      }
+    },
+    {
+      "id": "database",
+      "type": "text",
+      "x": 1000,
+      "y": 200,
+      "width": 160,
+      "height": 80,
+      "color": "#107c10",
+      "text": "# Database\n**PostgreSQL** with Drizzle ORM",
+      "pv": {
+        "nodeType": "database",
+        "description": "PostgreSQL database with Drizzle ORM"
+      }
+    },
+    {
+      "id": "cache",
+      "type": "text",
+      "x": 1000,
+      "y": 350,
+      "width": 120,
+      "height": 60,
+      "color": "#107c10",
+      "text": "# Cache Layer\n**Redis** for caching and rate limiting",
+      "pv": {
+        "nodeType": "cache",
+        "description": "Redis caching layer"
+      }
+    },
+    {
+      "id": "model-runtime",
+      "type": "text",
+      "x": 700,
+      "y": 400,
+      "width": 160,
+      "height": 80,
+      "color": "#ff8c00",
+      "text": "# AI Model Runtime\n**70+ AI provider** integrations",
+      "pv": {
+        "nodeType": "model-runtime",
+        "description": "AI model provider abstraction layer"
+      }
+    },
+    {
+      "id": "agent-runtime",
+      "type": "text",
+      "x": 400,
+      "y": 400,
+      "width": 160,
+      "height": 80,
+      "color": "#ff8c00",
+      "text": "# Agent Runtime\n**Agent execution** and orchestration engine",
+      "pv": {
+        "nodeType": "agent-runtime",
+        "description": "Agent execution and orchestration engine"
+      }
+    },
+    {
+      "id": "plugin-system",
+      "type": "text",
+      "x": 700,
+      "y": 550,
+      "width": 160,
+      "height": 80,
+      "color": "#8064a2",
+      "text": "# Plugin System\n**Extensible** plugin and tool ecosystem",
+      "pv": {
+        "nodeType": "plugin-system",
+        "description": "Plugin and tool ecosystem"
+      }
+    },
+    {
+      "id": "builtin-tools",
+      "type": "text",
+      "x": 400,
+      "y": 550,
+      "width": 160,
+      "height": 80,
+      "color": "#8064a2",
+      "text": "# Built-in Tools\n**Native tools** for common tasks",
+      "pv": {
+        "nodeType": "builtin-tools",
+        "description": "Built-in tools for common tasks"
+      }
+    },
+    {
+      "id": "context-engine",
+      "type": "text",
+      "x": 1000,
+      "y": 500,
+      "width": 160,
+      "height": 80,
+      "color": "#ff8c00",
+      "text": "# Context Engine\n**Conversation** context management",
+      "pv": {
+        "nodeType": "context-engine",
+        "description": "Conversation context management"
+      }
+    },
+    {
+      "id": "rag-engine",
+      "type": "text",
+      "x": 1300,
+      "y": 350,
+      "width": 160,
+      "height": 80,
+      "color": "#d83b01",
+      "text": "# RAG Engine\n**Retrieval-Augmented** Generation",
+      "pv": {
+        "nodeType": "rag-engine",
+        "description": "Retrieval-Augmented Generation system"
+      }
+    },
+    {
+      "id": "memory-system",
+      "type": "text",
+      "x": 1300,
+      "y": 200,
+      "width": 160,
+      "height": 80,
+      "color": "#d83b01",
+      "text": "# Memory System\n**User conversation** memory management",
+      "pv": {
+        "nodeType": "memory-system",
+        "description": "User conversation memory management"
+      }
+    },
+    {
+      "id": "chat-interface",
+      "type": "text",
+      "x": 100,
+      "y": -100,
+      "width": 180,
+      "height": 60,
+      "color": "#5c2d91",
+      "text": "# Chat Interface\n**Multi-agent** chat UI",
+      "pv": {
+        "nodeType": "chat-interface",
+        "description": "Multi-agent chat interface"
+      }
+    },
+    {
+      "id": "agent-editor",
+      "type": "text",
+      "x": 400,
+      "y": -100,
+      "width": 160,
+      "height": 60,
+      "color": "#5c2d91",
+      "text": "# Agent Editor\n**Visual agent** builder interface",
+      "pv": {
+        "nodeType": "agent-editor",
+        "description": "Visual agent builder interface"
+      }
+    },
+    {
+      "id": "auth-service",
+      "type": "text",
+      "x": 700,
+      "y": 50,
+      "width": 160,
+      "height": 60,
+      "color": "#ff8c00",
+      "text": "# Auth Service\n**Multi-provider** authentication",
+      "pv": {
+        "nodeType": "auth-service",
+        "description": "Multi-provider authentication"
+      }
+    },
+    {
+      "id": "security-layer",
+      "type": "text",
+      "x": 1000,
+      "y": 50,
+      "width": 160,
+      "height": 60,
+      "color": "#a4262c",
+      "text": "# Security Layer\n**Comprehensive** security protections",
+      "pv": {
+        "nodeType": "security-layer",
+        "description": "Comprehensive security protections"
+      }
+    },
+    {
+      "id": "streaming-engine",
+      "type": "text",
+      "x": 400,
+      "y": 700,
+      "width": 160,
+      "height": 60,
+      "color": "#d83b01",
+      "text": "# Streaming Engine\n**Real-time** response streaming",
+      "pv": {
+        "nodeType": "streaming-engine",
+        "description": "Real-time response streaming"
+      }
+    },
+    {
+      "id": "file-processors",
+      "type": "text",
+      "x": 700,
+      "y": 700,
+      "width": 160,
+      "height": 60,
+      "color": "#8064a2",
+      "text": "# File Processors\n**Multi-format** file processing",
+      "pv": {
+        "nodeType": "file-processors",
+        "description": "Multi-format file processing"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "ui-to-state",
+      "fromNode": "web-app",
+      "toNode": "state-store",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#107c10",
+      "pv": {
+        "edgeType": "state-sync"
+      }
+    },
+    {
+      "id": "desktop-to-state",
+      "fromNode": "desktop-app",
+      "toNode": "state-store",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#107c10",
+      "pv": {
+        "edgeType": "state-sync"
+      }
+    },
+    {
+      "id": "mobile-to-state",
+      "fromNode": "mobile-ui",
+      "toNode": "state-store",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#107c10",
+      "pv": {
+        "edgeType": "state-sync"
+      }
+    },
+    {
+      "id": "chat-to-web",
+      "fromNode": "chat-interface",
+      "toNode": "web-app",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#0078d4",
+      "pv": {
+        "edgeType": "contains"
+      }
+    },
+    {
+      "id": "editor-to-web",
+      "fromNode": "agent-editor",
+      "toNode": "web-app",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#0078d4",
+      "pv": {
+        "edgeType": "contains"
+      }
+    },
+    {
+      "id": "state-to-api",
+      "fromNode": "state-store",
+      "toNode": "api-layer",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#ff8c00",
+      "pv": {
+        "edgeType": "api-call"
+      }
+    },
+    {
+      "id": "auth-to-api",
+      "fromNode": "auth-service",
+      "toNode": "api-layer",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#ff8c00",
+      "pv": {
+        "edgeType": "authentication"
+      }
+    },
+    {
+      "id": "security-to-api",
+      "fromNode": "security-layer",
+      "toNode": "api-layer",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#a4262c",
+      "pv": {
+        "edgeType": "authentication"
+      }
+    },
+    {
+      "id": "api-to-db",
+      "fromNode": "api-layer",
+      "toNode": "database",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#107c10",
+      "pv": {
+        "edgeType": "data-persistence"
+      }
+    },
+    {
+      "id": "api-to-cache",
+      "fromNode": "api-layer",
+      "toNode": "cache",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#107c10",
+      "pv": {
+        "edgeType": "data-persistence"
+      }
+    },
+    {
+      "id": "api-to-models",
+      "fromNode": "api-layer",
+      "toNode": "model-runtime",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#ff8c00",
+      "pv": {
+        "edgeType": "api-call"
+      }
+    },
+    {
+      "id": "models-to-context",
+      "fromNode": "model-runtime",
+      "toNode": "context-engine",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#ff8c00",
+      "pv": {
+        "edgeType": "data-flow"
+      }
+    },
+    {
+      "id": "context-to-memory",
+      "fromNode": "context-engine",
+      "toNode": "memory-system",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#d83b01",
+      "pv": {
+        "edgeType": "data-persistence"
+      }
+    },
+    {
+      "id": "agent-to-models",
+      "fromNode": "agent-runtime",
+      "toNode": "model-runtime",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "color": "#ff8c00",
+      "pv": {
+        "edgeType": "tool-execution"
+      }
+    },
+    {
+      "id": "agent-to-tools",
+      "fromNode": "agent-runtime",
+      "toNode": "builtin-tools",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#8064a2",
+      "pv": {
+        "edgeType": "tool-execution"
+      }
+    },
+    {
+      "id": "agent-to-plugins",
+      "fromNode": "agent-runtime",
+      "toNode": "plugin-system",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#8064a2",
+      "pv": {
+        "edgeType": "plugin-connection"
+      }
+    },
+    {
+      "id": "plugin-to-tools",
+      "fromNode": "plugin-system",
+      "toNode": "builtin-tools",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#8064a2",
+      "pv": {
+        "edgeType": "contains"
+      }
+    },
+    {
+      "id": "tools-to-files",
+      "fromNode": "builtin-tools",
+      "toNode": "file-processors",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#8064a2",
+      "pv": {
+        "edgeType": "tool-execution"
+      }
+    },
+    {
+      "id": "rag-to-context",
+      "fromNode": "rag-engine",
+      "toNode": "context-engine",
+      "fromSide": "left",
+      "toSide": "right",
+      "color": "#d83b01",
+      "pv": {
+        "edgeType": "data-flow"
+      }
+    },
+    {
+      "id": "memory-to-rag",
+      "fromNode": "memory-system",
+      "toNode": "rag-engine",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#d83b01",
+      "pv": {
+        "edgeType": "data-flow"
+      }
+    },
+    {
+      "id": "streaming-to-ui",
+      "fromNode": "streaming-engine",
+      "toNode": "web-app",
+      "fromSide": "left",
+      "toSide": "right",
+      "color": "#0078d4",
+      "pv": {
+        "edgeType": "real-time-sync"
+      }
+    },
+    {
+      "id": "streaming-from-models",
+      "fromNode": "model-runtime",
+      "toNode": "streaming-engine",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#d83b01",
+      "pv": {
+        "edgeType": "ai-response"
+      }
+    },
+    {
+      "id": "files-to-rag",
+      "fromNode": "file-processors",
+      "toNode": "rag-engine",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#8064a2",
+      "pv": {
+        "edgeType": "data-flow"
+      }
+    },
+    {
+      "id": "desktop-ipc",
+      "fromNode": "desktop-app",
+      "toNode": "api-layer",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#ff8c00",
+      "pv": {
+        "edgeType": "api-call"
+      }
+    },
+    {
+      "id": "state-dependency",
+      "fromNode": "state-store",
+      "toNode": "agent-runtime",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#616161",
+      "pv": {
+        "edgeType": "depends-on"
+      }
+    }
+  ]
 }
